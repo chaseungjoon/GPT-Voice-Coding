@@ -22,9 +22,10 @@ This code uses OpenAI's GPT 3.5 model to convert real-time audio to python code 
 
 [Features]
 
-Because GPT's chat completion is used, You can also just say "Quicksort code" into the microphone and the corresponding code will be created.
+Because GPT's chat completion is used, You can also just say "Write a code for Quicksort" into the microphone and the corresponding code will be created.
 
 If you wish to voice code to a different programming language, fix the following parts of the code. (i.e. C++)
+
 1. line18 : 'python syntax' into 'C++ syntax'
 
 2. line72 : 'new.py' into 'new.cpp'
