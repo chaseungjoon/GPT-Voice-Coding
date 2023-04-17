@@ -5,23 +5,23 @@ import os
 import signal
 
 def speech_to_text(param):
-    openai.api_key = 'YOUR API KEY'
+    openai.api_key = '본인의 API Key'
     response = openai.Audio.transcribe(
         model = 'whisper-1',
         file = param,
-        temperature = '0.2'
+        temperature = 0.2
     )
     return response['text']
 
 def chat_completion(param):
-    openai.api_key = 'YOUR API KEY'
+    openai.api_key = '본인의 API Key'
     response = openai.ChatCompletion.create(
         model = 'gpt-3.5-turbo',
         messages = [
             {'role': 'system', 'content': ''},
-            {'role': 'user', 'content': 'convert the following text into fitting python syntax : '+param}
+            {'role': 'user', 'content': 'convert the following text into fitting python syntax : '+param+', Give me only the code'}
         ],
-        temperature = '0.2'
+        temperature = 0.2
     )
     return response['choices'][0]['message']['content']
 
@@ -38,7 +38,7 @@ stream = audio.open(format=FORMAT, channels=CHANNELS,
                     rate=RATE, input=True,
                     frames_per_buffer=CHUNK)
 
-print("Recording started, \nend the process to stop Recording")
+print("Recording started, \nCtrl+C to stop Recording")
 
 # Record audio until keyboard interrupt
 frames = []
@@ -72,9 +72,8 @@ waveFile.setframerate(RATE)
 waveFile.writeframes(b''.join(frames))
 waveFile.close()
 
-audio2 = open("YOUR PROJECT DIRECTORY/output.wav", "rb")
+audio2 = open("프로젝트 파일 디렉토리/output.wav", "rb")
 
 with open('new.py', 'w') as file:
     file.write(chat_completion(speech_to_text(audio2)))
 print("Your .py file has been created.")
-
