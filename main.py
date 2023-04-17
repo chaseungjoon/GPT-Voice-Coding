@@ -6,7 +6,11 @@ import signal
 
 def speech_to_text(param):
     openai.api_key = 'YOUR API KEY'
-    response = openai.Audio.transcribe("whisper-1", param)
+    response = openai.Audio.transcribe(
+        model = 'whisper-1',
+        file = param,
+        temperature = '0.2'
+    )
     return response['text']
 
 def chat_completion(param):
