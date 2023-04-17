@@ -4,9 +4,9 @@ This code uses OpenAI's GPT 3.5 model to convert real-time audio to python code 
 
 [ACTIONS NEEDED BEFORE COMPILING THE CODE]
 
-1. Create an OpenAI account and get access to your own API Key, in which you will use in line8 and 13 of the code. (The API request for this code is NOT FREE, but you will get 18$ worth of tokens once you sign up.)
+1. Create an OpenAI account and get access to your own API Key, in which you will use in line8 and 17 of the code. (The API request for this code is NOT FREE, but you will get 18$ worth of tokens once you sign up.)
 
-2. Type in your project directory at line70. (i.e. C:/Users/user/PycharmProjects/pythonProject)
+2. Type in your project directory at line75. (i.e. C:/Users/user/PycharmProjects/pythonProject)
 
 
 [How to Use]
