@@ -16,7 +16,8 @@ def chat_completion(param):
         messages = [
             {'role': 'system', 'content': ''},
             {'role': 'user', 'content': 'convert the following text into fitting python syntax : '+param}
-        ]
+        ],
+        temperature = '0.2'
     )
     return response['choices'][0]['message']['content']
 
