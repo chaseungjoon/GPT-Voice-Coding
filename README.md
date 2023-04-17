@@ -26,8 +26,8 @@ Because GPT's chat completion is used, You can also just say "Write a code for Q
 
 If you wish to voice code to a different programming language, fix the following parts of the code. (i.e. C++)
 
-1. line18 : 'python syntax' into 'C++ syntax'
+1. line22 : 'python syntax' into 'C++ syntax'
 
-2. line72 : 'new.py' into 'new.cpp'
+2. line77 : 'new.py' into 'new.cpp'
 
-3. line74 : 'Your .py file' to 'Your .cpp file'
+3. line79 : 'Your .py file' to 'Your .cpp file'
